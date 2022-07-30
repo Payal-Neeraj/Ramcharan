@@ -7,7 +7,7 @@ function Dashboard({repoRating, userRating, resultRating}) {
 
     // const userRating = "80";
     // const repoRating = "60";
-    const faltuRating = "70";
+    // const faltuRating = "50";
 
     const Progress = ({done}) => {
         const [style, setStyle] = React.useState({});
@@ -42,11 +42,23 @@ function Dashboard({repoRating, userRating, resultRating}) {
         </div>
         <div className='d-grid gap-2 d-md-flex'>
             <h4 className='lables'>Overall Rating</h4>
-            <Progress done = {faltuRating}/>
+            <Progress done = {resultRating}/>
         </div>
-        <div className='d-grid gap-2 d-md-flex col-6'>
-            <h4 className='final'>Good To Install</h4>
-        </div>
+        {
+            resultRating == 0 ?
+            <div className='d-grid gap-2 d-md-flex col-6'>
+            <h4 className='final_no'>No rating found</h4>
+            </div> :
+            ((resultRating >= 30) ?
+            <div className='d-grid gap-2 d-md-flex col-6'>
+            <h4 className='final_good'>Good To Install</h4>
+            </div> :
+            <div className='d-grid gap-2 d-md-flex col-6'>
+            <h4 className='final_bad'>Bad To Install</h4>
+            </div> )
+
+        }
+        
     </div>
   )
 }

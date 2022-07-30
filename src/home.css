@@ -34,8 +34,31 @@
     font-weight: 500;
 }
 
-.final{
+.final_good{
 	background-color: #0080009e;
+    border-radius: 10px;
+    padding: 8px;
+    margin-top: 30px;
+    margin-left: 100px;
+    color: white;
+    width: 450px;
+    text-align: center;
+    box-shadow: 1px 3px 7px #755c5c;
+}
+
+.final_bad{
+	background-color: red;
+    border-radius: 10px;
+    padding: 8px;
+    margin-top: 30px;
+    margin-left: 100px;
+    color: white;
+    width: 450px;
+    text-align: center;
+    box-shadow: 1px 3px 7px #755c5c;
+}
+.final_no{
+	background-color: yellow;
     border-radius: 10px;
     padding: 8px;
     margin-top: 30px;
